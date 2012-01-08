@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/*
+  Prints a Fahrenheit -> Celsius conversion table
+  [°C] = ([°F] − 32) × 5⁄9
+*/
+
 main() 
 {
   float fahr, celsius;
@@ -11,7 +16,6 @@ main()
 
   fahr = lower;
 
-  // print Fahrenheit -> Celsius table
   printf("  F      C\n");
   printf("==========\n");
  
