@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /*
-  Counts tabs, blanks and newlines
+  Counts newlines, blanks and tabs
 */
 main()
 {
-  int c, tabs, blanks, newlines;
+  int c, newlines, blanks, tabs;
 
   c = tabs = blanks = newlines = 0;
   while ((c = getchar()) != EOF)
