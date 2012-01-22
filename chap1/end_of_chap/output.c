@@ -1,1 +1,9 @@
-#include <stdio.h>main() {    printf("hello, world");}ÿ
+#include <stdio.h>
+
+
+
+main() 
+{
+    printf("hello, world");
+}
+ÿ

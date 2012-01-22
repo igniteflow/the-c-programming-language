@@ -16,7 +16,9 @@ main()
     output_file = fopen("output.c","w");
     
     if (input_file == NULL) 
-        perror ("Error opening file");
+        perror ("Error opening input file");
+    else if (output_file == NULL) 
+        perror ("Error opening output file");
     else
     {
         while (c != EOF) {
@@ -25,7 +27,8 @@ main()
                 in_comment = 1;
             if (prev_char == '*' && c == '/')
                 in_comment = 0;
-            if (in_comment == 0 && c != '/' && c != '\n')
+            if (in_comment == 0 || c != '/')
+                /* @todo allow for '/' when not in comment context */
                 fputc(c, output_file);
             prev_char = c;
         };
